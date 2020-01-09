@@ -1,7 +1,23 @@
-Artifact located in cmake-build-debug/mygame
+Created by Timothy Joyce
 
-Run on command line as executable
 
-This game has random events. And permadeath. Enjoy
+Text based adventure command line game.
 
-Game by Timothy Joyce
+When run, the game with generate a 7 x 5 map with random events located on each tile.
+The size of the map can be changed easily by giving integer values to the Gamecontroller constructor in
+the main.cpp file.
+
+The player character always starts on the upper left of the map, while the boss is lower right furthest point.
+Each turn player can navigate right,down,up,left as long as it is a valid direction.
+Events include shops where players can purchase potions, chests that either buff or debuff the player, empty spaces
+and combat encounters where the player engages in a turn based fight with the RNG enemies.
+
+In combat the player can use items, Attack in 3 different ways, or attempt to flee the encounter.
+
+When levels are entered (if the level is not already cleared or empty) a function will be called to start the
+specific event of the level.
+
+Game is over if player dies or defeats the boss.
+
+
+To build run make with makefile in ./debug. Make file is generated with cmake using CMakeLists.txt located in root folder.
